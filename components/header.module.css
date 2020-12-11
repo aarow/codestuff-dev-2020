@@ -1,0 +1,22 @@
+.blinkingBlock {
+  display: inline-block;
+  background: white;
+  margin: 0 0 0 0.2em;
+  width: 0.6em;
+  height: 1em;
+  position: relative;
+  top: 0.05em;
+  animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

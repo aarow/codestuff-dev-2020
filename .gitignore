@@ -33,3 +33,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+.idea/codestuff-dev-2020.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/prettier.xml
+.idea/vcs.xml
+.idea/codeStyles/codeStyleConfig.xml

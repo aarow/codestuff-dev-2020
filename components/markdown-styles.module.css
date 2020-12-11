@@ -1,5 +1,21 @@
+/*
+font-serif text-xl md:text-3xl lg:text-5xl xl:text-6xl leading-8 md:leading-9
+*/
+
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply font-serif text-lg leading-8;
+}
+
+@screen md {
+  .markdown {
+    @apply text-xl leading-9;
+  }
+}
+
+@screen lg {
+  .markdown {
+    @apply text-2xl leading-10;
+  }
 }
 
 .markdown p,

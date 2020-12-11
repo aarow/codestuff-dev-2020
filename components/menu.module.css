@@ -1,0 +1,37 @@
+.menu {
+  animation: showMenu 250ms forwards;
+}
+
+.menuHiding {
+  animation: hideMenu 250ms forwards;
+}
+
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

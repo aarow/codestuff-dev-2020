@@ -4,7 +4,7 @@ module.exports = {
     ...(process.env.NODE_ENV === 'production'
       ? [
           [
-            '@fullhuman/postcss-purgecss',
+            // '@fullhuman/postcss-purgecss',
             {
               content: [
                 './pages/**/*.{js,jsx,ts,tsx}',

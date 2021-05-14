@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import Date from "./date";
 import BlockContent from "@sanity/block-content-to-react";
-import { parseISO, differenceInMonths } from "date-fns";
+import { parseISO, differenceInMonths,endOfToday } from "date-fns";
 
 const Job = ({ _id, name, position, startDate, endDate, description }) => {
-  const [yearCount, setYearCount] = useState(0);
+  const startDateDate = startDate ? parseISO(startDate) : endOfToday();
+  const endDateDate = endDate ? parseISO(endDate) : endOfToday();
+  const yearCount = (
+    differenceInMonths(endDateDate, startDateDate) / 12
+  ).toFixed(1);
 
-  useEffect(() => {
-    const startDateDate = parseISO(startDate);
-    const endDateDate = parseISO(endDate);
-    const yearCount = (
-      differenceInMonths(endDateDate, startDateDate) / 12
-    ).toFixed(1);
-    setYearCount(yearCount);
-  }, []);
+  // useEffect(() => {
+  //   const yearCount = (
+  //     differenceInMonths(endDateDate, startDateDate) / 12
+  //   ).toFixed(1);
+  //   setYearCount(yearCount);
+  // }, []);
 
   return (
     <div className="bg-gray-800 p-5 transform hover:scale-105 transition-all duration-200 hover:shadow-2xl font-mono tracking-tighter font-light ">

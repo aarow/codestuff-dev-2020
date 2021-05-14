@@ -10,6 +10,7 @@ const POST_LIMIT = 10;
 const POST_COL_COUNT = 2;
 
 export default function Index({ allPosts, preview }) {
+  console.log(allPosts)
   return (
     <>
       <Head>
